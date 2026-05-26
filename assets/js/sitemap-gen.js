@@ -18,10 +18,10 @@ const OUTPUT_FILE = path.join(ROOT_DIR, 'sitemap.xml');
 
 // Páginas e suas prioridades (defina manualmente para controle fino)
 const PRIORITIES = {
-  '/':        { priority: '1.0', changefreq: 'monthly' },
-  '/about':   { priority: '0.8', changefreq: 'yearly'  },
-  '/contact': { priority: '0.7', changefreq: 'yearly'  },
-  '/privacy': { priority: '0.3', changefreq: 'yearly'  },
+  '/':                          { priority: '1.0', changefreq: 'monthly' },
+  '/suporte':                   { priority: '0.6', changefreq: 'yearly'  },
+  '/termos-de-uso':             { priority: '0.3', changefreq: 'yearly'  },
+  '/politica-de-privacidade':   { priority: '0.3', changefreq: 'yearly'  },
 };
 
 // Arquivos/pastas a ignorar
