@@ -4,9 +4,16 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Reatei — O acervo completo de reconquista</title>
+<!-- Preload LCP image (logo do hero) -->
+<link rel="preload" as="image" href="assets/img/reatei-logo.webp" fetchpriority="high" />
+
+<!-- Fontes: preconnect + carga assincrona (nao bloqueia render) -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono&display=swap" /></noscript>
+
 <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -15,7 +22,7 @@
 <header class="nav">
   <div class="wrap nav__inner">
     <a class="brand" href="#top" aria-label="Reatei">
-      <img src="assets/img/reatei-logo.png" alt="" class="brand__mark" />
+      <img src="assets/img/reatei-logo-sm.webp" alt="" class="brand__mark" width="30" height="30" />
       <span class="brand__word">Reatei</span>
     </a>
     <nav class="nav__links">
@@ -71,7 +78,7 @@
       <div class="logo-stage">
         <div class="logo-stage__ring"></div>
         <div class="logo-stage__ring logo-stage__ring--2"></div>
-        <img src="assets/img/reatei-logo.png" alt="Reatei" class="logo-stage__mark" />
+        <img src="assets/img/reatei-logo.webp" alt="Reatei" class="logo-stage__mark" width="800" height="800" fetchpriority="high" />
         <div class="logo-stage__shadow"></div>
       </div>
       <div class="logo-caption">
@@ -278,7 +285,7 @@
 
       <article class="coach">
         <div class="coach__photo" role="img" aria-label="Foto do Coach Jack">
-          <img src="assets/img/coach-jack.jpeg" alt="Coach Jack" class="coach__img" />
+          <img src="assets/img/coach-jack.webp" alt="Coach Jack" class="coach__img" width="1024" height="1536" loading="lazy" decoding="async" />
         </div>
         <div class="coach__body">
           <div class="coach__role">Coach principal</div>
@@ -298,7 +305,7 @@
 
       <article class="coach coach--soon">
         <div class="coach__photo" role="img" aria-label="Foto da Coach Mari">
-          <img src="assets/img/coach-mari.jpeg" alt="Coach Mari" class="coach__img" />
+          <img src="assets/img/coach-mari.webp" alt="Coach Mari" class="coach__img" width="1024" height="1536" loading="lazy" decoding="async" />
           <div class="coach__badge">Em breve no acervo</div>
         </div>
         <div class="coach__body">
@@ -564,7 +571,7 @@
     <div class="price-card">
       <div class="price-card__left">
         <div class="price-card__seal">
-          <img src="assets/img/reatei-logo.png" alt="" />
+          <img src="assets/img/reatei-logo-sm.webp" alt="" width="38" height="38" loading="lazy" />
         </div>
         <div class="price-card__plan">Anuidade Reatei</div>
         <h3 class="price-card__name">Acesso completo · 12 meses</h3>
@@ -688,7 +695,7 @@
 <!-- ─────────────────────────── CTA FINAL ─────────────────────────── -->
 <section class="finale">
   <div class="wrap finale__inner">
-    <img src="assets/img/reatei-logo.png" alt="" class="finale__mark" />
+    <img src="assets/img/reatei-logo-sm.webp" alt="" class="finale__mark" width="110" height="110" loading="lazy" />
     <h2 class="finale__title">
       <em>Reatar</em> é um verbo no passado.<br/>
       <span>A gente te ajuda a conjugá-lo.</span>
@@ -705,7 +712,7 @@
 <footer class="foot">
   <div class="wrap foot__inner">
     <div class="foot__brand">
-      <img src="assets/img/reatei-logo.png" alt="" />
+      <img src="assets/img/reatei-logo-sm.webp" alt="" width="38" height="38" loading="lazy" />
       <div>
         <div class="foot__name">Reatei</div>
         <div class="foot__tag">reatei.com.br · área de membros em app.reatei.com.br</div>
@@ -731,7 +738,7 @@ window.REATEI_TWEAKS = /*EDITMODE-BEGIN*/{
   "heroVariant": "reatar"
 }/*EDITMODE-END*/;
 </script>
-<script src="tweaks.js"></script>
+<script src="tweaks.js" defer></script>
 
 </body>
 </html>
