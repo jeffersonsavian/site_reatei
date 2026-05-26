@@ -1,89 +1,737 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Reatei — descrição da página para SEO (máx 160 caracteres)." />
-
-  <!-- Open Graph -->
-  <meta property="og:title"       content="Reatei" />
-  <meta property="og:description" content="Reatei — descrição curta." />
-  <meta property="og:image"       content="https://reatei.com.br/assets/img/reatei-logo.png" />
-  <meta property="og:url"         content="https://reatei.com.br/" />
-  <meta property="og:type"        content="website" />
-
-  <link rel="canonical" href="https://reatei.com.br/" />
-
-  <!-- Favicon (usa o logo enquanto não houver favicon dedicado) -->
-  <link rel="icon" type="image/png" href="/assets/img/reatei-logo.png" />
-
-  <title>Reatei — Tagline curta</title>
-
-  <!-- CSS do site -->
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-
-  <!-- Cookieconsent v3 (orestbida) — banner LGPD -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.1/dist/cookieconsent.css" />
-  <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.1/dist/cookieconsent.umd.js"></script>
-  <script defer src="/assets/js/cookies.js"></script>
-
-  <!-- Google Analytics — só carrega se o usuário aceitar a categoria "analytics" -->
-  <!-- Substitua G-XXXXXXX pelo seu ID, depois remova este comentário -->
-  <script type="text/plain" data-category="analytics"
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script type="text/plain" data-category="analytics">
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
-  </script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reatei — O acervo completo de reconquista</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ── HEADER ────────────────────────────────────────────── -->
-  <header>
-    <nav>
-      <a href="/" class="logo">
-        <img src="/assets/img/reatei-logo.png" alt="Reatei" height="40" />
-      </a>
-      <button id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-      <ul id="nav-menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">Sobre</a></li>
-        <li><a href="/contact">Contato</a></li>
-      </ul>
+<!-- ─────────────────────────── NAV ─────────────────────────── -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top" aria-label="Reatei">
+      <img src="assets/reatei-logo.png" alt="" class="brand__mark" />
+      <span class="brand__word">Reatei</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#oque">O que é</a>
+      <a href="#acervo">Acervo</a>
+      <a href="#coaches">Coaches</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#ia">IA Reatei</a>
+      <a href="#preco">Anuidade</a>
     </nav>
-  </header>
+    <a class="btn btn--ghost btn--sm" href="https://app.reatei.com.br" target="_blank" rel="noopener">Entrar</a>
+  </div>
+</header>
 
-  <!-- ── CONTEÚDO PRINCIPAL ────────────────────────────────── -->
-  <main>
-    <h1>Reatei</h1>
-    <p>Conteúdo aqui.</p>
+<!-- ─────────────────────────── HERO ─────────────────────────── -->
+<section class="hero" id="top">
+  <div class="hero__grain" aria-hidden="true"></div>
+  <div class="wrap hero__grid">
 
-    <section class="coaches">
-      <article>
-        <img src="/assets/img/coach-jack.jpeg" alt="Coach Jack" loading="lazy" />
-        <h2>Coach Jack</h2>
+    <div class="hero__copy">
+      <div class="eyebrow">
+        <span class="eyebrow__dot"></span>
+        Anuidade · 1 ano de acesso ilimitado
+      </div>
+
+      <h1 class="display">
+        Você ainda<br/>
+        <em>pode reatar.</em>
+      </h1>
+
+      <p class="lede">
+        Reatei é o acervo definitivo sobre reconquista — todo o método do Coach Jack
+        reunido num só lugar, com acesso ilimitado por um ano inteiro.
+        <span class="lede__soft">Em breve, também os cursos da Coach Mari.</span>
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#preco">
+          <span>Quero acesso por R$ 497</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#acervo">Ver o que está incluso</a>
+      </div>
+
+      <ul class="hero__bullets">
+        <li><span class="tick">✓</span> 22 cursos &amp; imersões</li>
+        <li><span class="tick">✓</span> 1 ano sem limite de acesso</li>
+        <li><span class="tick">✓</span> Garantia de 7 dias</li>
+      </ul>
+    </div>
+
+    <div class="hero__art">
+      <div class="logo-stage">
+        <div class="logo-stage__ring"></div>
+        <div class="logo-stage__ring logo-stage__ring--2"></div>
+        <img src="assets/reatei-logo.png" alt="Reatei" class="logo-stage__mark" />
+        <div class="logo-stage__shadow"></div>
+      </div>
+      <div class="logo-caption">
+        <span>re·a·tei</span>
+        <span class="sep">/</span>
+        <span>v. tr. — voltei a unir o que estava separado.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- marquee strip -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Reconquiste 6.0</span><span>·</span>
+      <span>Contato Zero</span><span>·</span>
+      <span>Carta Manuscrita</span><span>·</span>
+      <span>Projeto 21 Dias</span><span>·</span>
+      <span>Comunicação com a Ex</span><span>·</span>
+      <span>Como Afastar o Rebote</span><span>·</span>
+      <span>Instagram para Reconquista</span><span>·</span>
+      <span>Mensagens de Reconquista</span><span>·</span>
+      <span>Reconquiste 6.0</span><span>·</span>
+      <span>Contato Zero</span><span>·</span>
+      <span>Carta Manuscrita</span><span>·</span>
+      <span>Projeto 21 Dias</span><span>·</span>
+      <span>Comunicação com a Ex</span><span>·</span>
+      <span>Como Afastar o Rebote</span><span>·</span>
+      <span>Instagram para Reconquista</span><span>·</span>
+      <span>Mensagens de Reconquista</span><span>·</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── O QUE É ─────────────────────────── -->
+<section class="band band--light" id="oque">
+  <div class="wrap band__grid">
+    <div class="band__label">01 — Manifesto</div>
+    <h2 class="band__title">
+      Reatar não é<br/> sorte. <em>É método.</em>
+    </h2>
+    <div class="band__body">
+      <p>
+        A maioria das pessoas tenta voltar usando o que sente. Pede desculpa três vezes,
+        insiste, some, volta a insistir, manda áudio às três da manhã — e descobre, tarde,
+        que a vontade sozinha não reata nada.
+      </p>
+      <p>
+        Reatei é o oposto disso. É um acervo de cursos, imersões e materiais práticos
+        construídos por quem já viu milhares de casos. Você entende o que está
+        acontecendo, aprende a se posicionar, e age com cabeça — não com pânico.
+      </p>
+      <p class="band__sig">
+        Um ano de acesso. Tudo lá dentro. Você no comando.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── PILARES ─────────────────────────── -->
+<section class="pillars">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__label">02 — Os quatro pilares</div>
+      <h2 class="section-head__title">A reconquista não é uma coisa só. <em>São quatro.</em></h2>
+    </div>
+
+    <div class="pillars__grid">
+      <article class="pillar">
+        <div class="pillar__num">I</div>
+        <h3>Você</h3>
+        <p>Estabilidade emocional, ansiedade sob controle, presença. Antes da volta, o trabalho é interno.</p>
       </article>
-      <article>
-        <img src="/assets/img/coach-mari.jpeg" alt="Coach Mari" loading="lazy" />
-        <h2>Coach Mari</h2>
+      <article class="pillar">
+        <div class="pillar__num">II</div>
+        <h3>Distância</h3>
+        <p>Contato Zero, como afastar o rebote, e o tempo certo para deixar a saudade trabalhar a favor.</p>
       </article>
-    </section>
-  </main>
+      <article class="pillar">
+        <div class="pillar__num">III</div>
+        <h3>Comunicação</h3>
+        <p>O que dizer, como dizer, quando dizer. Mensagem, carta, conversa, instagram — cada canal, sua linguagem.</p>
+      </article>
+      <article class="pillar">
+        <div class="pillar__num">IV</div>
+        <h3>Reencontro</h3>
+        <p>Da primeira resposta ao primeiro café. Como conduzir sem assustar e sem voltar para o mesmo lugar.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-  <!-- ── FOOTER ────────────────────────────────────────────── -->
-  <footer>
-    <p>
-      &copy; <span id="year"></span> Reatei.
-      <a href="/privacy">Política de Privacidade</a> ·
-      <a href="#" data-cc="show-preferencesModal">Preferências de cookies</a>
+<!-- ─────────────────────────── ACERVO ─────────────────────────── -->
+<section class="catalog" id="acervo">
+  <div class="wrap">
+    <div class="section-head section-head--split">
+      <div>
+        <div class="section-head__label">03 — Acervo Reatei</div>
+        <h2 class="section-head__title">22 cursos. <em>Um só lugar.</em></h2>
+      </div>
+      <p class="section-head__lede">
+        Do diagnóstico ao reencontro: cada curso cobre uma etapa real da reconquista.
+        Os pilares do método estão destacados em primeiro lugar — os demais aprofundam e cobrem casos específicos.
+      </p>
+    </div>
+
+    <h3 class="catalog__group">Principais &nbsp;<span class="star">★</span></h3>
+    <div class="catalog__grid catalog__grid--main">
+      <article class="course course--star">
+        <div class="course__tag">Carro-chefe</div>
+        <h4>Reconquiste 6.0</h4>
+        <p>O método completo, do diagnóstico ao reencontro. Sexta edição, revisada para 2025.</p>
+        <div class="course__meta"><span>Curso completo</span><span>·</span><span>12 módulos</span></div>
+      </article>
+      <article class="course course--star">
+        <div class="course__tag">Comunicação</div>
+        <h4>Segredos da Comunicação com a Ex</h4>
+        <p>O que falar, o que evitar, e como ler entrelinhas em cada resposta.</p>
+        <div class="course__meta"><span>Curso</span><span>·</span><span>Aulas + scripts</span></div>
+      </article>
+      <article class="course course--star">
+        <div class="course__tag">Digital</div>
+        <h4>Instagram para Reconquista</h4>
+        <p>Como usar o feed, os stories e os bastidores para virar o jogo silenciosamente.</p>
+        <div class="course__meta"><span>Curso</span><span>·</span><span>Playbook</span></div>
+      </article>
+      <article class="course course--star">
+        <div class="course__tag">Rebote</div>
+        <h4>Como Afastar o Rebote</h4>
+        <p>Quando aparece outra pessoa — o que fazer, e o que <em>não</em> fazer, em cada cenário.</p>
+        <div class="course__meta"><span>Curso</span><span>·</span><span>Casos reais</span></div>
+      </article>
+      <article class="course course--star">
+        <div class="course__tag">Carta</div>
+        <h4>Carta Manuscrita</h4>
+        <p>A técnica mais poderosa da reconquista, passo a passo, com exemplos e correção.</p>
+        <div class="course__meta"><span>Curso</span><span>·</span><span>Templates</span></div>
+      </article>
+      <article class="course course--star">
+        <div class="course__tag">Estratégia</div>
+        <h4>Contato Zero</h4>
+        <p>Por que funciona, quanto tempo dura, e como atravessar sem recair.</p>
+        <div class="course__meta"><span>Curso</span><span>·</span><span>Cronograma</span></div>
+      </article>
+      <article class="course course--star">
+        <div class="course__tag">Plano</div>
+        <h4>Projeto 21 Dias</h4>
+        <p>Três semanas, três fases, um plano diário para sair da paralisia e agir com clareza.</p>
+        <div class="course__meta"><span>Programa</span><span>·</span><span>21 dias</span></div>
+      </article>
+    </div>
+
+    <h3 class="catalog__group">Aprofundamento &amp; complementos</h3>
+    <div class="catalog__grid catalog__grid--mini">
+      <div class="mini">Aulão de Reconquista</div>
+      <div class="mini">O Poder da Reconquista</div>
+      <div class="mini">O Guia da Reconquista</div>
+      <div class="mini">Imersão Xeque-Mate na Reconquista</div>
+      <div class="mini">Imersão 7 Formas Rápidas de Reconquista</div>
+      <div class="mini">Superando a Ansiedade</div>
+      <div class="mini">Mensagens de Reconquista</div>
+      <div class="mini">10 Formas de Desbloqueio</div>
+      <div class="mini">Guia de Perfumes Masculino</div>
+      <div class="mini mini--book">eBook · Primeiros Passos para a Reconquista</div>
+      <div class="mini mini--book">eBook · Felizes para Sempre</div>
+    </div>
+
+    <h3 class="catalog__group">Lives &amp; encontros ao vivo</h3>
+    <div class="catalog__grid catalog__grid--lives">
+      <div class="live"><span class="live__dot"></span>Lives de Carta Manuscrita</div>
+      <div class="live"><span class="live__dot"></span>Lives de Reconquista</div>
+      <div class="live"><span class="live__dot"></span>Lives Como Afastar o Rebote</div>
+      <div class="live"><span class="live__dot"></span>Lives Contato Zero</div>
+    </div>
+
+    <div class="catalog__total">
+      <div>
+        <div class="catalog__total-num">22</div>
+        <div class="catalog__total-label">cursos, imersões e materiais já inclusos</div>
+      </div>
+      <div class="catalog__total-divider"></div>
+      <div>
+        <div class="catalog__total-num">+ Mari</div>
+        <div class="catalog__total-label">novos cursos da Coach Mari chegando ao acervo</div>
+      </div>
+      <div class="catalog__total-divider"></div>
+      <div>
+        <div class="catalog__total-num">∞</div>
+        <div class="catalog__total-label">acesso ilimitado durante 1 ano</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── COACHES ─────────────────────────── -->
+<section class="coaches" id="coaches">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__label">04 — Quem ensina</div>
+      <h2 class="section-head__title">Dois olhares. <em>Um método.</em></h2>
+    </div>
+
+    <div class="coaches__grid">
+
+      <article class="coach">
+        <div class="coach__photo" role="img" aria-label="Foto do Coach Jack">
+          <img src="assets/coach-jack.jpeg" alt="Coach Jack" class="coach__img" />
+        </div>
+        <div class="coach__body">
+          <div class="coach__role">Coach principal</div>
+          <h3 class="coach__name">Jack</h3>
+          <p>
+            Há mais de uma década formando pessoas que conseguiram reatar — e mais ainda
+            que aprenderam, no caminho, a se reatar consigo mesmas primeiro.
+            Criador do método que estrutura o acervo Reatei.
+          </p>
+          <ul class="coach__meta">
+            <li>+ 80 mil alunos formados</li>
+            <li>Criador do <em>Reconquiste 6.0</em></li>
+            <li>Autor de <em>Felizes para Sempre</em></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="coach coach--soon">
+        <div class="coach__photo" role="img" aria-label="Foto da Coach Mari">
+          <img src="assets/coach-mari.jpeg" alt="Coach Mari" class="coach__img" />
+          <div class="coach__badge">Em breve no acervo</div>
+        </div>
+        <div class="coach__body">
+          <div class="coach__role">Coach convidada</div>
+          <h3 class="coach__name">Mari</h3>
+          <p>
+            A perspectiva feminina da reconquista — desejo, autoestima, comunicação madura
+            e os pontos cegos que o ponto de vista masculino, sozinho, deixa passar.
+            Os cursos da Mari entram no acervo nas próximas semanas, sem custo adicional.
+          </p>
+          <ul class="coach__meta">
+            <li>Foco em reconquista feminina</li>
+            <li>Cursos incluídos na sua anuidade</li>
+            <li>Lançamento previsto</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── DEPOIMENTOS ─────────────────────────── -->
+<section class="voices" id="depoimentos">
+  <div class="wrap">
+    <div class="section-head section-head--split">
+      <div>
+        <div class="section-head__label">05 — Quem já passou por aqui</div>
+        <h2 class="section-head__title">Histórias <em>de quem reatou.</em></h2>
+      </div>
+      <p class="section-head__lede">
+        O Reatei é um acervo novo — mas o método dentro dele não. Em mais de uma
+        década, milhares de pessoas aplicaram esses cursos. Aqui estão algumas delas.
+      </p>
+    </div>
+
+    <!-- featured quote -->
+    <article class="voice voice--hero">
+      <div class="voice__quote-mark" aria-hidden="true">“</div>
+      <blockquote>
+        Eu entrei achando que ia aprender a “fazer ela voltar”. Aprendi a parar de me
+        sabotar, a respeitar o tempo dela e a não mandar mensagem de madrugada.
+        Três meses depois, ela me procurou. Hoje estamos juntos de novo — diferentes,
+        melhores. Sem o método eu teria estragado tudo no primeiro fim de semana.
+      </blockquote>
+      <footer class="voice__by">
+        <div class="voice__avatar" aria-hidden="true">R</div>
+        <div>
+          <div class="voice__name">Rafael, 32</div>
+          <div class="voice__where">Belo Horizonte · aluno do Reconquiste 6.0</div>
+        </div>
+      </footer>
+    </article>
+
+    <!-- grid of cards -->
+    <div class="voices__grid">
+      <article class="voice">
+        <div class="voice__tag">Contato Zero</div>
+        <blockquote>
+          O Contato Zero parecia impossível na primeira semana. Na terceira eu já
+          tinha clareza de coisas que não enxergava fazia anos.
+        </blockquote>
+        <footer class="voice__by">
+          <div class="voice__avatar" aria-hidden="true">L</div>
+          <div>
+            <div class="voice__name">Lucas, 28</div>
+            <div class="voice__where">São Paulo</div>
+          </div>
+        </footer>
+      </article>
+
+      <article class="voice">
+        <div class="voice__tag">Carta Manuscrita</div>
+        <blockquote>
+          Escrevi a carta seguindo a estrutura do curso. Foi a primeira vez em meses que
+          ela me respondeu de verdade. Não foi mágica — foi método.
+        </blockquote>
+        <footer class="voice__by">
+          <div class="voice__avatar" aria-hidden="true">D</div>
+          <div>
+            <div class="voice__name">Diego, 35</div>
+            <div class="voice__where">Curitiba</div>
+          </div>
+        </footer>
+      </article>
+
+      <article class="voice">
+        <div class="voice__tag">Como Afastar o Rebote</div>
+        <blockquote>
+          Apareceu outro cara e eu surtei. Esse curso me fez parar, respirar e entender
+          o que aquilo era de verdade. Sobrevivi à fase do rebote e ela voltou.
+        </blockquote>
+        <footer class="voice__by">
+          <div class="voice__avatar" aria-hidden="true">B</div>
+          <div>
+            <div class="voice__name">Bruno, 30</div>
+            <div class="voice__where">Recife</div>
+          </div>
+        </footer>
+      </article>
+
+      <article class="voice">
+        <div class="voice__tag">Projeto 21 Dias</div>
+        <blockquote>
+          21 dias com uma tarefa por dia. Saí da paralisia. Independente do final,
+          virei outra pessoa nesse processo.
+        </blockquote>
+        <footer class="voice__by">
+          <div class="voice__avatar" aria-hidden="true">T</div>
+          <div>
+            <div class="voice__name">Thiago, 41</div>
+            <div class="voice__where">Porto Alegre</div>
+          </div>
+        </footer>
+      </article>
+
+      <article class="voice">
+        <div class="voice__tag">Superando a Ansiedade</div>
+        <blockquote>
+          A parte mais dura não foi ela ter ido. Foi a ansiedade que veio depois. Esse
+          curso me deu o chão de volta antes de qualquer reconquista.
+        </blockquote>
+        <footer class="voice__by">
+          <div class="voice__avatar" aria-hidden="true">G</div>
+          <div>
+            <div class="voice__name">Gabriel, 26</div>
+            <div class="voice__where">Salvador</div>
+          </div>
+        </footer>
+      </article>
+
+      <article class="voice">
+        <div class="voice__tag">Comunicação com a Ex</div>
+        <blockquote>
+          Eu mandava parágrafos. Aprendi a mandar duas linhas. Aprendi também a esperar.
+          Foi o que mudou tudo.
+        </blockquote>
+        <footer class="voice__by">
+          <div class="voice__avatar" aria-hidden="true">F</div>
+          <div>
+            <div class="voice__name">Fernando, 38</div>
+            <div class="voice__where">Brasília</div>
+          </div>
+        </footer>
+      </article>
+    </div>
+
+    <!-- numbers strip -->
+    <div class="voices__strip">
+      <div class="voices__strip-item">
+        <div class="voices__strip-num">+ 80 mil</div>
+        <div class="voices__strip-label">alunos formados nos cursos do método</div>
+      </div>
+      <div class="voices__strip-divider"></div>
+      <div class="voices__strip-item">
+        <div class="voices__strip-num">10+ anos</div>
+        <div class="voices__strip-label">de método refinado em casos reais</div>
+      </div>
+      <div class="voices__strip-divider"></div>
+      <div class="voices__strip-item">
+        <div class="voices__strip-num">4,8 / 5</div>
+        <div class="voices__strip-label">avaliação média entre alunos ativos</div>
+      </div>
+    </div>
+
+    <p class="voices__disclaimer">
+      Depoimentos de alunos dos cursos que compõem o acervo Reatei. Nomes preservados
+      a pedido. Resultados variam de pessoa para pessoa — reconquistar exige aplicação,
+      tempo e maturidade, e nem todo término tem volta. Reatei não promete resultado.
     </p>
-  </footer>
+  </div>
+</section>
 
-  <!-- ── SCRIPTS ───────────────────────────────────────────── -->
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script src="/assets/js/main.js"></script>
+<!-- ─────────────────────────── IA REATEI ─────────────────────────── -->
+<section class="ai" id="ia">
+  <div class="wrap ai__grid">
+
+    <div class="ai__copy">
+      <div class="eyebrow eyebrow--light">
+        <span class="eyebrow__dot"></span>
+        Em breve · incluído na anuidade
+      </div>
+      <h2 class="ai__title">
+        Sua bússola dentro<br/> do <em>acervo.</em>
+      </h2>
+      <p class="ai__lede">
+        São 22 cursos. A IA Reatei serve só para uma coisa: olhar a sua situação
+        e te dizer <em>quais aulas assistir agora</em>. Quem ensina é o curso. Ela só
+        evita que você se perca no meio do caminho.
+      </p>
+
+      <ul class="ai__features">
+        <li>
+          <span class="ai__feat-key">A.</span>
+          <div>
+            <strong>Você conta o contexto.</strong>
+            Em que pé está, o que aconteceu nas últimas semanas, onde travou.
+          </div>
+        </li>
+        <li>
+          <span class="ai__feat-key">B.</span>
+          <div>
+            <strong>Ela aponta as aulas certas.</strong>
+            Lista curta, em ordem. Sem prescrição, sem palpite — só direcionamento.
+          </div>
+        </li>
+        <li>
+          <span class="ai__feat-key">C.</span>
+          <div>
+            <strong>Quem reconquista é você.</strong>
+            Assistindo, estudando e aplicando. A IA não é atalho, é mapa.
+          </div>
+        </li>
+      </ul>
+
+      <p class="ai__caveat">
+        <span>!</span> A IA Reatei <strong>não dá conselhos</strong>, não responde
+        “o que fazer agora” e não substitui o curso. Ela apenas indica o material
+        do acervo mais relevante para a sua fase.
+      </p>
+    </div>
+
+    <aside class="ai__mock" aria-hidden="true">
+      <div class="ai__mock-head">
+        <div class="ai__mock-dot"></div>
+        <span>IA Reatei · beta privado</span>
+      </div>
+      <div class="ai__mock-body">
+        <div class="bubble bubble--user">
+          Estamos sem se falar há 14 dias. Ela respondeu um story meu hoje. Não sei o que fazer.
+        </div>
+        <div class="bubble bubble--ai">
+          <div class="bubble__title">Aulas recomendadas</div>
+          Pelo que você descreveu, você está na <strong>fase final do Contato Zero</strong>.
+          Antes de qualquer ação, revise o material abaixo na ordem:
+          <div class="bubble__refs">
+            <span>1 · Contato Zero — Aula 7: rompimento do silêncio</span>
+            <span>2 · Mensagens de Reconquista — Aulas 3 e 4</span>
+            <span>3 · Segredos da Comunicação com a Ex — Módulo 2</span>
+          </div>
+          <div class="bubble__note">
+            A IA Reatei não diz o que escrever ou quando responder. As decisões estão nas aulas.
+          </div>
+        </div>
+        <div class="ai__mock-input">
+          <span>Descreva sua situação…</span>
+          <div class="ai__mock-send">↵</div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<!-- ─────────────────────────── PREÇO ─────────────────────────── -->
+<section class="pricing" id="preco">
+  <div class="wrap">
+    <div class="section-head section-head--center">
+      <div class="section-head__label">06 — Anuidade Reatei</div>
+      <h2 class="section-head__title">Um preço. <em>Um ano inteiro.</em></h2>
+    </div>
+
+    <div class="price-card">
+      <div class="price-card__left">
+        <div class="price-card__seal">
+          <img src="assets/reatei-logo.png" alt="" />
+        </div>
+        <div class="price-card__plan">Anuidade Reatei</div>
+        <h3 class="price-card__name">Acesso completo · 12 meses</h3>
+        <ul class="price-card__list">
+          <li><span>✓</span> Todos os 22 cursos e imersões do Coach Jack</li>
+          <li><span>✓</span> Novos cursos da Coach Mari, conforme chegam</li>
+          <li><span>✓</span> Lives e encontros do acervo</li>
+          <li><span>✓</span> IA Reatei (em breve, incluída)</li>
+          <li><span>✓</span> Acesso ilimitado por 1 ano em <code>app.reatei.com.br</code></li>
+          <li><span>✓</span> Garantia incondicional de 7 dias</li>
+        </ul>
+      </div>
+
+      <div class="price-card__right">
+        <div class="price-card__from">de <s>R$ 4.726</s> por</div>
+        <div class="price-card__price">
+          <span class="price-card__currency">R$</span>
+          <span class="price-card__amount">497</span>
+        </div>
+        <div class="price-card__split">ou 12× de R$ 49,80 no cartão</div>
+        <a class="btn btn--primary btn--block" href="https://app.reatei.com.br/checkout" target="_blank" rel="noopener">
+          Começar agora
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="price-card__pay">
+          <span>Pagamentos</span>
+          <div class="price-card__pay-row">
+            <span class="paychip">Visa</span>
+            <span class="paychip">Master</span>
+            <span class="paychip">Pix</span>
+            <span class="paychip">Boleto</span>
+          </div>
+        </div>
+        <div class="price-card__fine">
+          Renovação opcional ao final do ano. Sem cobrança automática.
+        </div>
+      </div>
+    </div>
+
+    <!-- guarantee -->
+    <div class="guarantee">
+      <div class="guarantee__seal">
+        <span class="guarantee__num">7</span>
+        <span class="guarantee__txt">dias</span>
+      </div>
+      <div class="guarantee__copy">
+        <h3>Garantia incondicional de 7 dias.</h3>
+        <p>
+          Entre, explore o acervo, comece um curso. Se não for para você,
+          a gente devolve cada centavo — sem perguntar nada, sem letras miúdas.
+          O risco é nosso.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── FAQ ─────────────────────────── -->
+<section class="faq" id="faq">
+  <div class="wrap faq__wrap">
+    <div class="section-head">
+      <div class="section-head__label">07 — Perguntas</div>
+      <h2 class="section-head__title">As que <em>todo mundo</em> faz.</h2>
+    </div>
+
+    <div class="faq__list">
+      <details class="qa">
+        <summary>Para quem é o Reatei?<span class="qa__icon"></span></summary>
+        <div class="qa__body">
+          Para qualquer pessoa que terminou um relacionamento que ainda importa e quer
+          uma chance real de reatar — com método, não com sorte. Funciona para casos
+          recentes e para términos antigos que nunca cicatrizaram direito.
+        </div>
+      </details>
+      <details class="qa">
+        <summary>Quanto tempo eu tenho de acesso?<span class="qa__icon"></span></summary>
+        <div class="qa__body">
+          12 meses corridos a partir da compra, ilimitado, sem limite de aulas por dia
+          ou de quantas vezes você pode rever um conteúdo.
+        </div>
+      </details>
+      <details class="qa">
+        <summary>Os cursos da Coach Mari já estão no ar?<span class="qa__icon"></span></summary>
+        <div class="qa__body">
+          Ainda não — entram no acervo nas próximas semanas e ficam automaticamente
+          disponíveis para quem já é anuidade Reatei. Sem cobrança adicional.
+        </div>
+      </details>
+      <details class="qa">
+        <summary>E a IA Reatei?<span class="qa__icon"></span></summary>
+        <div class="qa__body">
+          Em desenvolvimento. Assinantes da anuidade ganham acesso assim que entrar em
+          beta, incluído no plano. O preço da anuidade não muda depois do lançamento da IA.
+        </div>
+      </details>
+      <details class="qa">
+        <summary>Como funciona o pagamento?<span class="qa__icon"></span></summary>
+        <div class="qa__body">
+          R$ 497 à vista no Pix ou cartão, ou em 12× de R$ 49,80 no cartão de crédito.
+          Boleto disponível para pagamento à vista.
+        </div>
+      </details>
+      <details class="qa">
+        <summary>E se eu não gostar?<span class="qa__icon"></span></summary>
+        <div class="qa__body">
+          Você tem 7 dias para pedir reembolso, sem precisar justificar. A gente
+          devolve 100% do valor.
+        </div>
+      </details>
+      <details class="qa">
+        <summary>Vocês oferecem suporte?<span class="qa__icon"></span></summary>
+        <div class="qa__body">
+          Sim. Suporte por e-mail e WhatsApp para questões de acesso, pagamento e
+          dúvidas gerais sobre o acervo, em horário comercial.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── CTA FINAL ─────────────────────────── -->
+<section class="finale">
+  <div class="wrap finale__inner">
+    <img src="assets/reatei-logo.png" alt="" class="finale__mark" />
+    <h2 class="finale__title">
+      <em>Reatar</em> é um verbo no passado.<br/>
+      <span>A gente te ajuda a conjugá-lo.</span>
+    </h2>
+    <a class="btn btn--primary btn--lg" href="#preco">
+      Quero minha anuidade Reatei
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <div class="finale__fine">R$ 497 · 1 ano de acesso · garantia de 7 dias</div>
+  </div>
+</section>
+
+<!-- ─────────────────────────── FOOTER ─────────────────────────── -->
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div class="foot__brand">
+      <img src="assets/reatei-logo.png" alt="" />
+      <div>
+        <div class="foot__name">Reatei</div>
+        <div class="foot__tag">reatei.com.br · área de membros em app.reatei.com.br</div>
+      </div>
+    </div>
+    <div class="foot__links">
+      <a href="#">Termos de uso</a>
+      <a href="#">Política de privacidade</a>
+      <a href="#">Suporte</a>
+    </div>
+    <div class="foot__legal">
+      © 2026 Reatei. Todos os direitos reservados.<br/>
+      Resultados dependem de aplicação individual. Reatei não promete reconquista garantida.
+    </div>
+  </div>
+</footer>
+
+<!-- ─────────────────────────── TWEAKS ─────────────────────────── -->
+<script>
+window.REATEI_TWEAKS = /*EDITMODE-BEGIN*/{
+  "accent": "#B11B22",
+  "mood": "dark",
+  "heroVariant": "reatar"
+}/*EDITMODE-END*/;
+</script>
+<script src="tweaks.js"></script>
 
 </body>
 </html>
