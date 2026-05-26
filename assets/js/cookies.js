@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
             acceptAllBtn: 'Aceitar todos',
             acceptNecessaryBtn: 'Só essenciais',
             showPreferencesBtn: 'Personalizar',
-            footer: '<a href="/pages/privacy">Política de Privacidade</a>',
+            footer: '<a href="/privacy">Política de Privacidade</a>',
           },
           preferencesModal: {
             title: 'Preferências de cookies',
@@ -86,7 +86,7 @@ window.addEventListener('load', function () {
               {
                 title: 'Mais informações',
                 description:
-                  'Dúvidas sobre nossa política? <a href="/pages/contact">Entre em contato</a>.',
+                  'Dúvidas sobre nossa política? <a href="/contact">Entre em contato</a>.',
               },
             ],
           },

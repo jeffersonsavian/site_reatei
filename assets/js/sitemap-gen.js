@@ -18,15 +18,14 @@ const OUTPUT_FILE = path.join(ROOT_DIR, 'sitemap.xml');
 
 // Páginas e suas prioridades (defina manualmente para controle fino)
 const PRIORITIES = {
-  '/':           { priority: '1.0', changefreq: 'monthly' },
-  '/sobre':      { priority: '0.8', changefreq: 'yearly'  },
-  '/servicos':   { priority: '0.8', changefreq: 'monthly' },
-  '/contato':    { priority: '0.7', changefreq: 'yearly'  },
-  '/privacidade':{ priority: '0.3', changefreq: 'yearly'  },
+  '/':        { priority: '1.0', changefreq: 'monthly' },
+  '/about':   { priority: '0.8', changefreq: 'yearly'  },
+  '/contact': { priority: '0.7', changefreq: 'yearly'  },
+  '/privacy': { priority: '0.3', changefreq: 'yearly'  },
 };
 
 // Arquivos/pastas a ignorar
-const IGNORE = ['404.html', 'privacy.html'];
+const IGNORE = ['404.html'];
 // ─────────────────────────────────────────────────────────────
 
 function getHtmlFiles(dir, baseDir = dir) {
@@ -46,6 +45,8 @@ function getHtmlFiles(dir, baseDir = dir) {
 function fileToUrl(filePath, rootDir) {
   let relative = filePath.replace(rootDir, '').replace(/\\/g, '/');
   relative = relative.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+  // Esconde a pasta /pages/ na URL pública (rewrite no .htaccess faz o resto)
+  relative = relative.replace(/^\/pages\//, '/');
   if (relative === '') relative = '/';
   return relative;
 }
