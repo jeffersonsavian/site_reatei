@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reatei — descrição da página para SEO (máx 160 caracteres)." />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Reatei" />
+  <meta property="og:description" content="Reatei — descrição curta." />
+  <meta property="og:image"       content="https://www.seudominio.com.br/assets/img/reatei-logo.png" />
+  <meta property="og:url"         content="https://www.seudominio.com.br/" />
+  <meta property="og:type"        content="website" />
+
+  <link rel="canonical" href="https://www.seudominio.com.br/" />
+
+  <!-- Favicon (usa o logo enquanto não houver favicon dedicado) -->
+  <link rel="icon" type="image/png" href="/assets/img/reatei-logo.png" />
+
+  <title>Reatei — Tagline curta</title>
+
+  <!-- CSS do site -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!-- Cookieconsent v3 (orestbida) — banner LGPD -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.1/dist/cookieconsent.css" />
+  <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.1/dist/cookieconsent.umd.js"></script>
+  <script defer src="/assets/js/cookies.js"></script>
+
+  <!-- Google Analytics — só carrega se o usuário aceitar a categoria "analytics" -->
+  <!-- Substitua G-XXXXXXX pelo seu ID, depois remova este comentário -->
+  <script type="text/plain" data-category="analytics"
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script type="text/plain" data-category="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+</head>
+<body>
+
+  <!-- ── HEADER ────────────────────────────────────────────── -->
+  <header>
+    <nav>
+      <a href="/" class="logo">
+        <img src="/assets/img/reatei-logo.png" alt="Reatei" height="40" />
+      </a>
+      <button id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <ul id="nav-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/about">Sobre</a></li>
+        <li><a href="/pages/contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── CONTEÚDO PRINCIPAL ────────────────────────────────── -->
+  <main>
+    <h1>Reatei</h1>
+    <p>Conteúdo aqui.</p>
+
+    <section class="coaches">
+      <article>
+        <img src="/assets/img/coach-jack.jpeg" alt="Coach Jack" loading="lazy" />
+        <h2>Coach Jack</h2>
+      </article>
+      <article>
+        <img src="/assets/img/coach-mari.jpeg" alt="Coach Mari" loading="lazy" />
+        <h2>Coach Mari</h2>
+      </article>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer>
+    <p>
+      &copy; <span id="year"></span> Reatei.
+      <a href="/pages/privacy">Política de Privacidade</a> ·
+      <a href="#" data-cc="show-preferencesModal">Preferências de cookies</a>
+    </p>
+  </footer>
+
+  <!-- ── SCRIPTS ───────────────────────────────────────────── -->
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/assets/js/main.js"></script>
+
+</body>
+</html>

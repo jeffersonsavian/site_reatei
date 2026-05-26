@@ -1,0 +1,23 @@
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Variáveis de ambiente (nunca suba isso)
+.env
+.env.local
+.env.production
+
+# Dependências (se usar build tools futuramente)
+node_modules/
+dist/
+
+# Backups temporários
+*.bak
+*.tmp
