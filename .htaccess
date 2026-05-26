@@ -2,13 +2,30 @@
 # LITESPEED — CACHE & PERFORMANCE
 # ============================================================
 
-# LSCache (LiteSpeed) — muito mais rápido que mod_expires
+# ════════════════════════════════════════════════════════════
+# LSCache (LiteSpeed) — equivalente ao plugin do WordPress
+# Documentacao: https://docs.litespeedtech.com/lscache/lscwp/
+# ════════════════════════════════════════════════════════════
 <IfModule LiteSpeed>
-  CacheLookup on
+  # Habilita o modulo LSCache
+  CacheLookup public on
 
-  # Cacheia HTML por 1 hora no edge do LiteSpeed
+  # ── HTML: cache publico por 1 dia (site estatico, conteudo raro muda)
   RewriteEngine On
-  RewriteRule .* - [E=Cache-Control:max-age=3600]
+  RewriteRule .* - [E=Cache-Control:public,max-age=86400]
+
+  # ── Nao cacheia se houver query string (?utm_source=, ?preview, etc)
+  RewriteCond %{QUERY_STRING} .+
+  RewriteRule .* - [E=Cache-Control:no-cache]
+
+  # ── Nao cacheia metodos POST nem area logada (se existir no futuro)
+  RewriteCond %{REQUEST_METHOD} !^GET$ [OR]
+  RewriteCond %{HTTP_COOKIE} (wordpress_logged_in|admin_session) [NC]
+  RewriteRule .* - [E=Cache-Control:no-cache]
+
+  # ── Vary: separa cache mobile/desktop (se quiser usar)
+  # RewriteCond %{HTTP_USER_AGENT} (mobile|android|iphone) [NC]
+  # RewriteRule .* - [E=Cache-Vary:ismobile]
 </IfModule>
 
 # Fallback Apache (mod_expires) — usado se LSCache não estiver ativo
