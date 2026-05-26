@@ -12,7 +12,7 @@ const fs   = require('fs');
 const path = require('path');
 
 // ── CONFIGURAÇÃO ─────────────────────────────────────────────
-const BASE_URL    = 'https://www.seudominio.com.br'; // Sem barra no final
+const BASE_URL    = 'https://reatei.com.br'; // Sem barra no final
 const ROOT_DIR    = path.resolve(__dirname, '../../'); // Raiz do projeto
 const OUTPUT_FILE = path.join(ROOT_DIR, 'sitemap.xml');
 

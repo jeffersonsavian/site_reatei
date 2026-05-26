@@ -5,7 +5,7 @@
 | Campo       | Valor                        |
 |-------------|------------------------------|
 | Cliente     | Nome do cliente              |
-| Domínio     | https://www.seudominio.com.br |
+| Domínio     | https://reatei.com.br        |
 | Servidor    | Cloudpanel / VPS             |
 | Contato     | email@cliente.com.br         |
 | Início      | DD/MM/AAAA                   |
@@ -68,7 +68,7 @@ Edite `BASE_URL` e o objeto `PRIORITIES` no topo do arquivo antes de rodar.
 
 ## Checklist de Go-Live
 
-- [ ] Substituir todos `seudominio.com.br` pelo domínio real
+- [x] Substituir todos `seudominio.com.br` pelo domínio real (`reatei.com.br`)
 - [ ] Substituir `G-XXXXXXX` pelo ID do Google Analytics
 - [ ] Descomentar bloco do GA no `<head>` do HTML
 - [ ] Rodar `sitemap-gen.js` e verificar URLs geradas
